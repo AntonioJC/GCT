@@ -12,59 +12,54 @@
 <script type="text/javascript" src="static/node_modules/scripts/OrbiterMicro_latest.js"></script> 
 <script type="text/javascript" src="static/node_modules/scripts/UnionDraw.js"></script>
 
-<div id="div_canvas" class="row" style="margin-top: 140px">
-  <div id="div_canvas2" class="col-xs-12 col-sm-12 col-md-12 col-lg-6" style="background-color: red;">        
-  
-   
-    <!--Drop down menus for selecting line thickness and color-->
-    
-    <div id="controls">
-      Size:
-      <select id="thickness" class="fixed btn btn-warning">
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	<option value="5">5</option>
-	<option value="10">10</option>
-	<option value="20">20</option>
-      </select>
+<div class="container-fluid roombg">
+  <div id="div_canvas" class="row" style="margin-top: 140px">
+    <div id="div_canvas2" class="col-xs-12 col-sm-12 col-md-12 col-lg-6">        
       
-      Color:
-      <select id="color" class="btn btn-warning">
-	<option value="#FFFFFF">#FFFFFF</option>
-	<option value="#AAAAAA">#AAAAAA</option>
-	<option value="#666666">#666666</option>
-	<option value="#000000">#000000</option>
-	<option value="#9BA16C">#9BA16C</option>
-	<option value="#CC8F2B">#CC8F2B</option>
-	<option value="#63631D">#63631D</option>
-      </select>
+      
+      <!--Drop down menus for selecting line thickness and color-->
+      
+      <div id="controls">
+	Size:
+	<select id="thickness" class="fixed btn btn-warning">
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	  <option value="5">5</option>
+	  <option value="10">10</option>
+	  <option value="20">20</option>
+	</select>
+	
+	Color:
+	<select id="color" class="btn btn-warning">
+	  <option value="#FFFFFF">#FFFFFF</option>
+	  <option value="#AAAAAA">#AAAAAA</option>
+	  <option value="#666666">#666666</option>
+	  <option value="#000000">#000000</option>
+	  <option value="#9BA16C">#9BA16C</option>
+	  <option value="#CC8F2B">#CC8F2B</option>
+	  <option value="#63631D">#63631D</option>
+	</select>
+      </div>
+      
+      <!--A status text field, for displaying connection information-->
+      <div id="status" ></div>
+      
+      <!--The canvas where drawings will be displayed-->
+      <canvas id="canvas" > </canvas>
+
+
     </div>
     
-    <!--A status text field, for displaying connection information-->
-    <div id="status" ></div>
-        
-    <!--The canvas where drawings will be displayed-->
-    <canvas id="canvas" > </canvas>
-
-
-  </div>
- 
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6"  style="background-color: blue;">    
-    
-    <iframe id="video" src="https://appear.in/miguelg" width="600" height="640" frameborder="0"></iframe> 
-    
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">    
+      
+      <iframe id="video" src="https://appear.in/miguelg" width="600" height="640" frameborder="0"></iframe> 
+      
+    </div>
   </div>
 </div>
 
 
-
-
-
-
-
-<!--A status text field, for displaying connection information-->
-<div id="status" ></div>
 
 {% endblock %}
