@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!--Prevents iPhone, iPad, and touch devices from scrolling or zooming when touched-->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+<div class="row">
+  <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1"></div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">        
+    
+    
+    <!--Drop down menus for selecting line thickness and color-->
+    
+    <div id="controls">
+      Size:
+      <select id="thickness" class="fixed btn btn-warning">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="10">10</option>
+	<option value="20">20</option>
+      </select>
+      
+      Color:
+      <select id="color" class="btn btn-warning">
+	<option value="#FFFFFF">#FFFFFF</option>
+	<option value="#AAAAAA">#AAAAAA</option>
+	<option value="#666666">#666666</option>
+	<option value="#000000">#000000</option>
+	<option value="#9BA16C">#9BA16C</option>
+	<option value="#CC8F2B">#CC8F2B</option>
+	<option value="#63631D">#63631D</option>
+      </select>
+    </div>
+    
+    <!--A status text field, for displaying connection information-->
+    <div id="status" ></div>
+        
+    <!--The canvas where drawings will be displayed-->
+    <canvas id="canvas" > </canvas>
+    
+  </div>
+  <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2"></div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">    
+    
+    <iframe id="video" src="https://appear.in/miguelg" width="600" height="640" frameborder="0"></iframe> 
+  </div>
+  <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
+</div>
+
+
+<!-- <script type="text/javascript" src="http://cdn.unioncloud.io/OrbiterMicro_latest.js"></script> -->
+<script type="text/javascript" src="static/node_modules/scripts/OrbiterMicro_latest.js"></script> 
+<script type="text/javascript" src="static/node_modules/scripts/UnionDraw.js"></script>
+
+{% endblock %}
+
