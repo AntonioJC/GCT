@@ -6,11 +6,16 @@
 <!--Prevents iPhone, iPad, and touch devices from scrolling or zooming when touched-->
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 
-<div class="row">
-  <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1"></div>
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">        
-    
-    
+
+
+<!-- <script type="text/javascript" src="http://cdn.unioncloud.io/OrbiterMicro_latest.js"></script> -->
+<script type="text/javascript" src="static/node_modules/scripts/OrbiterMicro_latest.js"></script> 
+<script type="text/javascript" src="static/node_modules/scripts/UnionDraw.js"></script>
+
+<div class="row" style="margin-top: 140px">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6" style="background-color: red;">        
+  
+   
     <!--Drop down menus for selecting line thickness and color-->
     
     <div id="controls">
@@ -42,20 +47,24 @@
         
     <!--The canvas where drawings will be displayed-->
     <canvas id="canvas" > </canvas>
-    
+
+
   </div>
-  <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2"></div>
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">    
+ 
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6"  style="background-color: blue;">    
     
     <iframe id="video" src="https://appear.in/miguelg" width="600" height="640" frameborder="0"></iframe> 
+    
   </div>
-  <div class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></div>
 </div>
 
 
-<!-- <script type="text/javascript" src="http://cdn.unioncloud.io/OrbiterMicro_latest.js"></script> -->
-<script type="text/javascript" src="static/node_modules/scripts/OrbiterMicro_latest.js"></script> 
-<script type="text/javascript" src="static/node_modules/scripts/UnionDraw.js"></script>
+
+
+
+
+
+<!--A status text field, for displaying connection information-->
+<div id="status" ></div>
 
 {% endblock %}
-
